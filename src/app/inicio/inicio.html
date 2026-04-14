@@ -38,3 +38,96 @@
   </div>
 
 </div>
+<section id="productos" class="bg-white py-24 px-6 md:px-20">
+
+  <div class="max-w-7xl mx-auto">
+
+    <!-- Header -->
+    <div class="mb-20 text-center reveal" appReveal>
+      <h2 class="text-3xl md:text-5xl tracking-[6px] font-light mb-6">
+        PRODUCTOS DESTACADOS
+      </h2>
+      <p class="text-zinc-500 max-w-xl mx-auto leading-relaxed">
+        Elaboraciones artesanales con ingredientes seleccionados de Canarias
+      </p>
+    </div>
+
+    <!-- Grid -->
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-12">
+
+      <!-- Producto 1 -->
+      <div class="group cursor-pointer reveal" appReveal data-delay="1">
+        
+        <div class="relative overflow-hidden rounded-xl mb-5">
+          
+          <img 
+            src="../../assets/almogrote_mojo.png"
+            class="w-full h-80 object-cover transition duration-700 group-hover:scale-110"
+          />
+
+          <!-- overlay elegante -->
+          <div class="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition duration-500"></div>
+
+        </div>
+
+        <h3 class="text-lg tracking-[3px] mb-1">ALMOGROTE</h3>
+        <p class="text-zinc-500 text-sm mb-2">Sabor intenso y tradicional</p>
+        <span class="text-black font-medium">8.50€</span>
+
+      </div>
+
+      <!-- Producto 2 -->
+      <div class="group cursor-pointer reveal" appReveal data-delay="2">
+        
+        <div class="relative overflow-hidden rounded-xl mb-5">
+          
+          <img 
+            src="../../assets/almogrote_mojo.png"
+            class="w-full h-80 object-cover transition duration-700 group-hover:scale-110"
+          />
+
+          <div class="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition duration-500"></div>
+
+        </div>
+
+        <h3 class="text-lg tracking-[3px] mb-1">MOJO ROJO</h3>
+        <p class="text-zinc-500 text-sm mb-2">Receta canaria auténtica</p>
+        <span class="text-black font-medium">6.90€</span>
+
+      </div>
+
+      <!-- Producto 3 -->
+      <div class="group cursor-pointer reveal" appReveal data-delay="3">
+        
+        <div class="relative overflow-hidden rounded-xl mb-5">
+          
+          <img 
+            src="../../assets/almogrote_mojo.png"
+            class="w-full h-80 object-cover transition duration-700 group-hover:scale-110"
+          />
+
+          <div class="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition duration-500"></div>
+
+        </div>
+
+        <h3 class="text-lg tracking-[3px] mb-1">CREMA DE QUESO</h3>
+        <p class="text-zinc-500 text-sm mb-2">Suave y cremosa</p>
+        <span class="text-black font-medium">7.20€</span>
+
+      </div>
+
+    </div>
+
+    <!-- CTA -->
+    <div class="text-center mt-20 reveal" appReveal data-delay="4">
+      <a
+        routerLink="/products"
+        class="inline-block border border-black px-10 py-3 text-sm tracking-[3px] hover:bg-black hover:text-white transition-all duration-300"
+      >
+        VER TODOS LOS PRODUCTOS
+      </a>
+    </div>
+
+  </div>
+
+</section>
