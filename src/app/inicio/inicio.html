@@ -1,7 +1,6 @@
 <!-- HERO -->
 <div class="relative w-full h-screen overflow-hidden">
 
-  <!-- Imagen principal -->
   <img
     id="heroImage"
     src="assets/almogrote_mojo.png"
@@ -9,28 +8,44 @@
     class="w-full h-full object-cover scale-105"
   />
 
-  <!-- Overlay degradado -->
   <div
-    class="absolute inset-0 bg-gradient-to-r from-black/70 via-black/40 to-transparent"
+    class="absolute inset-0 bg-gradient-to-r
+           from-black/75 via-black/45 to-black/10"
   ></div>
 
-  <!-- Contenido del hero -->
   <div class="absolute inset-0 flex items-center px-6 md:px-20">
 
-    <div class="max-w-xl text-white">
+    <div class="max-w-2xl text-white">
 
-      <h1 class="text-4xl md:text-6xl tracking-[6px] font-light mb-4">
+      <span
+        class="inline-block mb-5 text-xs md:text-sm
+               tracking-[4px] text-zinc-300 uppercase"
+      >
+        Sabores artesanales de Canarias
+      </span>
+
+      <h1
+        class="text-4xl md:text-6xl lg:text-7xl
+               tracking-[6px] font-light mb-5"
+      >
         MORGAM
       </h1>
 
-      <p class="text-lg md:text-2xl text-zinc-200 mb-8 leading-relaxed">
-        Descubre el auténtico sabor de Canarias
+      <p
+        class="text-lg md:text-2xl text-zinc-200
+               mb-9 leading-relaxed max-w-xl"
+      >
+        Descubre una selección gourmet creada para llevar el auténtico sabor
+        canario a tu mesa.
       </p>
 
       <a
         href="#productos"
-        class="inline-block border border-white px-8 py-3 text-sm tracking-[2px]
-               hover:bg-white hover:text-black transition-all duration-300"
+        class="inline-flex items-center justify-center
+               border border-white px-8 py-3
+               text-sm tracking-[2px]
+               hover:bg-white hover:text-black
+               transition-all duration-300"
       >
         EXPLORAR PRODUCTOS
       </a>
@@ -42,105 +57,132 @@
 </div>
 
 
-<!-- PRODUCTOS -->
+<!-- PRODUCTOS DESTACADOS -->
 <section
   id="productos"
-  class="bg-white py-24 px-6 md:px-20"
+  class="bg-white py-20 md:py-24 px-6 md:px-20"
 >
   <div class="max-w-7xl mx-auto">
 
     <!-- Encabezado -->
     <div
-      class="mb-20 text-center reveal"
+      class="mb-14 md:mb-16 text-center reveal"
       appReveal
     >
-      <h2 class="text-3xl md:text-5xl tracking-[6px] font-light mb-6">
+      <span
+        class="inline-block mb-4 text-xs md:text-sm
+               tracking-[4px] text-zinc-400 uppercase"
+      >
+        Nuestra selección
+      </span>
+
+      <h2
+        class="text-3xl md:text-5xl
+               tracking-[6px] font-light mb-6"
+      >
         PRODUCTOS DESTACADOS
       </h2>
 
-      <p class="text-zinc-500 max-w-xl mx-auto leading-relaxed">
-        Elaboraciones artesanales con ingredientes seleccionados de Canarias
+      <p
+        class="text-zinc-500 max-w-xl
+               mx-auto leading-relaxed"
+      >
+        Elaboraciones artesanales con ingredientes seleccionados de Canarias.
       </p>
     </div>
 
-    <!-- Grid de productos -->
+    <!-- Grid -->
     <div
-      class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12 items-stretch"
+      class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3
+             gap-x-10 gap-y-14 items-stretch"
     >
 
-      <!-- Tarjeta de producto -->
-      <div
+      <article
         *ngFor="let producto of productosDestacados; let i = index"
-        class="group cursor-pointer reveal flex flex-col h-full"
+        class="group reveal flex flex-col h-full"
         appReveal
         [attr.data-delay]="i + 1"
       >
 
         <!-- Imagen -->
-        <div class="relative overflow-hidden rounded-xl mb-5 bg-white">
-
+        <div
+          class="relative overflow-hidden rounded-2xl
+                 mb-6 bg-zinc-50 border border-zinc-100"
+        >
           <img
             [src]="producto.ruta_imagen"
             [alt]="producto['nombre producto']"
-            class="w-full h-80 object-contain p-4
-                   transition duration-700
-                   group-hover:scale-110"
+            class="w-full h-80 md:h-96 object-contain p-6
+                   transition-transform duration-700
+                   group-hover:scale-105"
           />
 
-          <!-- Overlay -->
           <div
-            class="absolute inset-0 bg-black/0
-                   group-hover:bg-black/10
-                   transition duration-500"
+            class="absolute inset-0
+                   bg-gradient-to-t from-black/5 to-transparent
+                   opacity-0 group-hover:opacity-100
+                   transition-opacity duration-500"
           ></div>
 
-        </div>
-
-        <!-- Nombre -->
-        <h3 class="text-lg tracking-[3px] mb-2 uppercase">
-          {{ producto['nombre producto'] }}
-        </h3>
-
-        <!-- Descripción -->
-        <p class="text-zinc-500 text-sm mb-5 leading-relaxed">
-          {{ producto.descripcion }}
-        </p>
-
-        <!-- Precio y botón alineados abajo -->
-        <div class="mt-auto">
-
-          <span class="block text-black font-medium mb-5">
+          <span
+            class="absolute top-4 right-4
+                   bg-white/95 backdrop-blur-sm
+                   px-4 py-2 rounded-full
+                   text-sm font-medium shadow-sm"
+          >
             {{ producto.precio | number:'1.2-2' }} €
           </span>
+        </div>
 
-          <button
-            type="button"
-            (click)="agregarAlCarrito(producto)"
-            class="w-full border border-black px-6 py-3
-                   text-sm tracking-[2px]
-                   hover:bg-black hover:text-white
-                   transition-all duration-300"
+        <!-- Contenido -->
+        <div class="flex flex-col flex-1">
+
+          <h3
+            class="text-lg md:text-xl
+                   tracking-[3px] mb-3 uppercase"
           >
-            AÑADIR AL CARRITO
-          </button>
+            {{ producto['nombre producto'] }}
+          </h3>
+
+          <p
+            class="text-zinc-500 text-sm
+                   mb-6 leading-relaxed"
+          >
+            {{ producto.descripcion }}
+          </p>
+
+          <div class="mt-auto">
+
+            <button
+              type="button"
+              (click)="agregarAlCarrito(producto)"
+              class="w-full bg-black text-white
+                     border border-black px-6 py-3.5
+                     text-sm tracking-[2px]
+                     hover:bg-white hover:text-black
+                     transition-all duration-300"
+            >
+              AÑADIR AL CARRITO
+            </button>
+
+          </div>
 
         </div>
 
-      </div>
+      </article>
 
     </div>
 
-    <!-- Botón ver todos -->
+    <!-- Ver todos -->
     <div
-      class="text-center mt-20 reveal"
+      class="text-center mt-16 md:mt-20 reveal"
       appReveal
       [attr.data-delay]="productosDestacados.length + 1"
     >
       <a
-      href="/productos"
-        routerLink="/productos"
-        class="inline-block border border-black px-10 py-3
-               text-sm tracking-[3px]
+        href="/productos"
+        class="inline-block border border-black
+               px-10 py-3 text-sm tracking-[3px]
                hover:bg-black hover:text-white
                transition-all duration-300"
       >
