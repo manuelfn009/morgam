@@ -10,32 +10,22 @@ import { RevealDirective } from '../shared/directives/reveal';
 import productosJson from '../../assets/productos.json';
 
 @Component({
-  selector: 'app-inicio',
-  standalone: true,
-  imports: [
+  selector: 'app-productos',
+   imports: [
     CommonModule,
     RevealDirective
   ],
-  templateUrl: './inicio.html',
-  styleUrls: ['./inicio.css'],
+  templateUrl: './productos.html',
+  styleUrl: './productos.css',
 })
-export class Inicio implements AfterViewInit {
+export class Productos implements AfterViewInit{
 
   isScrolled = false;
 
   productos = productosJson;
- 
-  productosDestacados = this.productos.filter(producto =>
-  [
-    'Almogrote 100g',
-    'Mojo picón',
-    'Mojo verde'
-  ].includes(producto['nombre producto'])
-);
 agregarAlCarrito(producto: any): void {
   console.log('Producto añadido al carrito:', producto);
 }
-
   @HostListener('window:scroll', [])
   onScroll(): void {
     this.isScrolled = window.scrollY > 50;

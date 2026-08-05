@@ -68,9 +68,9 @@
       class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12 items-stretch"
     >
 
-      <!-- Tarjeta de producto -->
+      <!-- Tarjeta repetida por cada producto -->
       <div
-        *ngFor="let producto of productosDestacados; let i = index"
+        *ngFor="let producto of productos; let i = index"
         class="group cursor-pointer reveal flex flex-col h-full"
         appReveal
         [attr.data-delay]="i + 1"
@@ -128,24 +128,6 @@
 
       </div>
 
-    </div>
-
-    <!-- Botón ver todos -->
-    <div
-      class="text-center mt-20 reveal"
-      appReveal
-      [attr.data-delay]="productosDestacados.length + 1"
-    >
-      <a
-      href="/productos"
-        routerLink="/productos"
-        class="inline-block border border-black px-10 py-3
-               text-sm tracking-[3px]
-               hover:bg-black hover:text-white
-               transition-all duration-300"
-      >
-        VER TODOS LOS PRODUCTOS
-      </a>
     </div>
 
   </div>

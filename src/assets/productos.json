@@ -1,0 +1,56 @@
+[
+  {
+    "nombre producto": "Crema de queso con flores",
+    "descripcion": "Crema de queso gourmet con flores, presentada en tarro de cristal y etiquetada como sin gluten.",
+    "precio": 4.5,
+    "ruta_imagen": "assets/productos_web/flores.png"
+  },
+  {
+    "nombre producto": "Mojo picón",
+    "descripcion": "Salsa mojo picón de sabor intenso y especiado, presentada en tarro de cristal y etiquetada como sin gluten.",
+    "precio": 5,
+    "ruta_imagen": "assets/productos_web/mojo_picon.png"
+  },
+   {
+    "nombre producto": "Mojo picón suave",
+    "descripcion": "Salsa mojo picón de sabor suave y especiado, presentada en tarro de cristal y etiquetada como sin gluten.",
+    "precio": 5,
+    "ruta_imagen": "assets/productos_web/mojo_suave.png"
+  },
+  {
+    "nombre producto": "Crema de morcilla tipo Burgos",
+    "descripcion": "Crema de morcilla estilo Burgos, presentada en lata metálica con ilustraciones de morcilla, pan y vino.",
+    "precio": 4.5,
+    "ruta_imagen": "assets/productos_web/morcilla.png"
+  },
+  {
+    "nombre producto": "Mojo verde",
+    "descripcion": "Salsa mojo verde elaborada con hierbas, ajo y pimiento verde, presentada en tarro de cristal y etiquetada como sin gluten.",
+    "precio": 5,
+    "ruta_imagen": "assets/productos_web/mojo_verde.png"
+  },
+  {
+    "nombre producto": "Almogrote 100g",
+    "descripcion": "",
+    "precio": 4.5,
+    "ruta_imagen": "assets/productos_web/almogrote.png"
+  },
+  {
+    "nombre producto": "Crema de queso con miel",
+    "descripcion": "Crema de queso de cabra gourmet con miel, presentada en tarro de cristal y etiquetada como sin gluten.",
+    "precio": 4.5,
+    "ruta_imagen": "assets/productos_web/miel.png"
+  },
+  {
+    "nombre producto": "Crema de rulo de cabra con mermelada de pimientos",
+    "descripcion": "",
+    "precio": 4.5,
+    "ruta_imagen": "assets/productos_web/pimientos.png"
+  },
+  {
+    "nombre producto": "Crema de queso con boletus",
+    "descripcion": "Crema de queso de cabra gourmet con boletus, presentada en tarro de cristal y etiquetada como sin gluten.",
+    "precio": 4.5,
+    "ruta_imagen": "assets/productos_web/boletus.png"
+  }
+]
