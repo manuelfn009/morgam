@@ -6,6 +6,10 @@ import {
 
 import { CommonModule } from '@angular/common';
 import { RevealDirective } from '../shared/directives/reveal';
+import { RouterLink } from '@angular/router';
+import { inject } from '@angular/core';
+import { CarritoService } from '../core/services/carrito.service';
+import { Producto } from '../core/models/producto';
 
 import productosJson from '../../assets/productos.json';
 
@@ -13,19 +17,22 @@ import productosJson from '../../assets/productos.json';
   selector: 'app-productos',
    imports: [
     CommonModule,
-    RevealDirective
+    RevealDirective,
+    RouterLink
   ],
   templateUrl: './productos.html',
   styleUrl: './productos.css',
 })
-export class Productos implements AfterViewInit{
+export class Productos implements AfterViewInit {
+
+  private readonly carrito = inject(CarritoService);
 
   isScrolled = false;
 
   productos = productosJson;
-agregarAlCarrito(producto: any): void {
-  console.log('Producto añadido al carrito:', producto);
-}
+agregarAlCarrito(producto: Producto): void {
+    this.carrito.agregar(producto);
+  }
   @HostListener('window:scroll', [])
   onScroll(): void {
     this.isScrolled = window.scrollY > 50;
